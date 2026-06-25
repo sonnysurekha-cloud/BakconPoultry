@@ -13,7 +13,7 @@ services:
         value: "bakcon-backend.onrender.com,localhost"
       - key: DATABASE_URL
         value: "" # Set this from the Render Postgres service credentials (do not commit secrets)
-      - key: SECRET_KEY
+      - key: DJANGO_SECRET_KEY
         value: "" # Set this as a secret in Render dashboard
 
   - type: web_service

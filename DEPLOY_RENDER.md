@@ -30,7 +30,7 @@ This document describes steps to recreate the backend as a Docker service on Ren
 
 5) Set Backend environment variables (Render dashboard → Service → Environment)
 - `DATABASE_URL` = (value from the Postgres service)
-- `SECRET_KEY` = (use your generated secret — don't commit)
+- `DJANGO_SECRET_KEY` = (use your generated secret — don't commit)
 - `DJANGO_DEBUG` = `false`
 - `DJANGO_ALLOWED_HOSTS` = `bakcon-backend.onrender.com,localhost` (replace hostname with the Render service URL)
 
