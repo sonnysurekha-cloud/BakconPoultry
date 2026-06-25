@@ -32,7 +32,7 @@ This document describes steps to recreate the backend as a Docker service on Ren
 - `DATABASE_URL` = (value from the Postgres service)
 - `DJANGO_SECRET_KEY` = (use your generated secret — don't commit)
 - `DJANGO_DEBUG` = `false`
-- `DJANGO_ALLOWED_HOSTS` = `bakcon-backend.onrender.com,localhost` (replace hostname with the Render service URL)
+- `DJANGO_ALLOWED_HOSTS` = `bakcon-ajuf.onrender.com,localhost` (replace hostname with the Render service URL)
 
 6) Confirm `release_command` (already in `render.yaml`)
 - We added: `python manage.py migrate && python manage.py collectstatic --noinput`

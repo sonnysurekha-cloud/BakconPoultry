@@ -10,7 +10,7 @@ services:
       - key: DJANGO_DEBUG
         value: "false"
       - key: DJANGO_ALLOWED_HOSTS
-        value: "bakcon-backend.onrender.com,localhost"
+        value: "bakcon-ajuf.onrender.com,localhost"
       - key: DATABASE_URL
         value: "" # Set this from the Render Postgres service credentials (do not commit secrets)
       - key: DJANGO_SECRET_KEY
