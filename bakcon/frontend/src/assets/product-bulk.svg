@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#ffffff"/>
+  <rect x="40" y="40" width="120" height="80" rx="10" fill="#FFF6DC" stroke="#FFD166" stroke-width="3"/>
+  <text x="100" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" fill="#374151" font-weight="700">Bulk</text>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet">
+  <rect width="1200" height="700" fill="#FFF8E1"/>
+  <!-- fields -->
+  <rect x="0" y="420" width="1200" height="280" fill="#E8F6D9"/>
+  <rect x="0" y="520" width="1200" height="160" fill="#DDEFC9"/>
+
+  <!-- sun -->
+  <circle cx="140" cy="120" r="48" fill="#FFD166" opacity="0.95" />
+
+  <!-- egg shape center -->
+  <g transform="translate(600,300)">
+    <ellipse cx="0" cy="40" rx="260" ry="300" fill="#FFD166" stroke="#F59E0B" stroke-width="10"/>
+    <ellipse cx="0" cy="-40" rx="130" ry="170" fill="#FFF6DC"/>
+  </g>
+
+  <!-- text -->
+  <text x="80" y="130" font-family="Inter, sans-serif" font-size="48" fill="#374151" font-weight="700">Bakcon Eggs</text>
+  <text x="80" y="170" font-family="Inter, sans-serif" font-size="20" fill="#6b7280">Fresh eggs from our farm to your table</text>
+</svg>
