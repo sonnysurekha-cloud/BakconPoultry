@@ -5,6 +5,16 @@ services:
     branch: main
     dockerfilePath: Dockerfile
     plan: free
+    release_command: "python manage.py migrate && python manage.py collectstatic --noinput"
+    envVars:
+      - key: DJANGO_DEBUG
+        value: "false"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: "bakcon-backend.onrender.com,localhost"
+      - key: DATABASE_URL
+        value: "" # Set this from the Render Postgres service credentials (do not commit secrets)
+      - key: SECRET_KEY
+        value: "" # Set this as a secret in Render dashboard
 
   - type: web_service
     name: bakcon-frontend
@@ -12,3 +22,6 @@ services:
     branch: main
     dockerfilePath: frontend/Dockerfile
     plan: free
+    envVars:
+      - key: API_BASE_URL
+        value: "https://bakcon-backend.onrender.com"
