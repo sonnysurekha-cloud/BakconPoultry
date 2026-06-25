@@ -28,11 +28,8 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', os.getenv('SECRET_KEY', 'django-inse
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
 # Hosts allowed to serve the app (comma-separated in `DJANGO_ALLOWED_HOSTS` or `ALLOWED_HOSTS`)
-raw_allowed_hosts = os.getenv('DJANGO_ALLOWED_HOSTS') or os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost')
-render_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
-if render_hostname:
-    raw_allowed_hosts = f"{raw_allowed_hosts},{render_hostname}"
-ALLOWED_HOSTS = [host.strip() for host in raw_allowed_hosts.split(',') if host.strip()]
+
+ALLOWED_HOSTS = ['*']  # Allow all hosts for development; change in production
 
 
 # Application definition
