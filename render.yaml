@@ -3,7 +3,7 @@ services:
     name: bakcon-backend
     env: docker
     branch: main
-    dockerfilePath: Dockerfile
+    dockerfilePath: bakcon/Dockerfile
     plan: free
     release_command: "python manage.py migrate && python manage.py collectstatic --noinput"
     envVars:
