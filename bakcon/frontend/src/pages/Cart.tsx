@@ -69,13 +69,13 @@ export default function Cart() {
       <style>{`
         .cart-grid{display:grid;grid-template-columns:1fr 360px;gap:28px}
         .cart-item{display:flex;gap:16px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 16px 50px rgba(2,6,23,0.18);border:1px solid rgba(255,255,255,0.04)}
-        .cart-image{width:110px;height:80px;overflow:hidden;border-radius:8px}
+        .cart-image{width:300px;height:400px;overflow:hidden;border-radius:12px;flex-shrink:0}
         .cart-image img{width:100%;height:100%;object-fit:cover}
         .qty-controls{display:flex;gap:8px;align-items:center}
         .checkout-panel{background:linear-gradient(180deg,#0b0b0b,#0d0d0d);padding:18px;border-radius:12px;color:#fff;box-shadow:0 30px 90px rgba(2,6,23,0.6)}
         .muted{color:var(--muted)}
         @media (max-width:900px){.cart-grid{grid-template-columns:1fr}}
-        @media (max-width:760px){.cart-item{flex-direction:column;align-items:stretch}.cart-image{width:100%;height:auto}.cart-image img{height:auto}.checkout-panel{width:100%;padding:20px}.qty-controls{flex-wrap:wrap}.qty-controls button{flex:1}.qty-controls div{min-width:36px}.checkout-panel .btn{width:100%;margin-bottom:10px}}`}</style>
+        @media (max-width:760px){.cart-item{flex-direction:column;align-items:stretch}.cart-image{width:100%;height:auto;max-width:300px;margin:0 auto}.cart-image img{width:100%;height:auto}.checkout-panel{width:100%;padding:20px}.qty-controls{flex-wrap:wrap}.qty-controls button{flex:1}.qty-controls div{min-width:36px}.checkout-panel .btn{width:100%;margin-bottom:10px}}`}</style>
 
       <h1 style={{marginTop:0}}>Your Cart</h1>
       {items.length === 0 && (
