@@ -1,4 +1,4 @@
-FROM node:18-alpine AS frontend-builder
+FROM node:22-alpine AS frontend-builder
 WORKDIR /frontend
 COPY bakcon/frontend/package*.json ./
 RUN npm install --silent
