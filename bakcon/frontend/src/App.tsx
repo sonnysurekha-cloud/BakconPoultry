@@ -1,6 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
@@ -19,12 +19,16 @@ import FloatingCart from './components/FloatingCart'
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const location = useLocation()
   useScrollProgress()
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), 1700)
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    setLoading(true)
+
+    const timer = window.setTimeout(() => setLoading(false), 700)
     return () => window.clearTimeout(timer)
-  }, [])
+  }, [location.pathname])
 
   return (
     <div className="app-root">
