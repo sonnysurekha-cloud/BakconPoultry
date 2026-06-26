@@ -41,14 +41,16 @@
 
 .ring {
   position: absolute;
+  display: inline-block;
   border-radius: 50%;
   border: 2px solid rgba(233, 168, 37, 0.35);
   box-shadow: 0 0 40px rgba(233, 168, 37, 0.25);
   animation: spin 4s linear infinite;
+  transform-origin: center;
 }
 
 .ring--one { width: 240px; height: 240px; border-color: rgba(233, 168, 37, 0.22); animation-duration: 6s; }
-.ring--two { width: 180px; height: 180px; border-color: rgba(255, 205, 68, 0.32); animation-duration: 4.5s; }
+.ring--two { width: 180px; height: 180px; border-color: rgba(255, 205, 68, 0.32); animation-duration: 4.5s; animation-direction: reverse; }
 .ring--three { width: 120px; height: 120px; border-color: rgba(255, 255, 255, 0.9); animation-duration: 3.4s; }
 
 .core {
@@ -111,13 +113,16 @@
 
 @keyframes spin {
   0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(0.94); }
+  25% { transform: rotate(85deg) scale(1.02); }
+  50% { transform: rotate(180deg) scale(0.96); }
+  75% { transform: rotate(265deg) scale(1.02); }
   100% { transform: rotate(360deg) scale(1); }
 }
 
 @keyframes shimmer {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
-  50% { transform: translateY(-12px) scale(1.25); opacity: 1; }
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; }
+  35% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+  65% { transform: translateY(8px) scale(0.95); opacity: 0.75; }
 }
 
 @media (max-width: 520px) {
