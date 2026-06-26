@@ -1,8 +1,8 @@
 FROM node:18-alpine AS frontend-builder
 WORKDIR /frontend
-COPY frontend/package*.json ./
+COPY bakcon/frontend/package*.json ./
 RUN npm install --silent
-COPY frontend/ .
+COPY bakcon/frontend/ .
 RUN npm run build
 
 FROM python:3.12-slim
