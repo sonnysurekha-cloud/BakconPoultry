@@ -22,7 +22,7 @@
 
 .loading-screen__header {
   display: grid;
-  gap: 14px;
+  gap: 10px;
   text-align: center;
 }
 
@@ -30,24 +30,9 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.28em;
-  font-size: 0.75rem;
-  color: #7a5b23;
-  font-weight: 700;
-}
-
-.loading-screen__header h1 {
-  margin: 0;
-  font-size: clamp(32px, 5vw, 40px);
-  font-weight: 700;
+  font-size: 1.05rem;
   color: #1f2326;
-}
-
-.loading-screen__caption {
-  margin: 0 auto;
-  max-width: 320px;
-  color: #5e5441;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-weight: 700;
 }
 
 .loading-screen__spinner {
