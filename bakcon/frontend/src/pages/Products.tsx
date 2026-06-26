@@ -151,7 +151,7 @@ export default function Products() {
           </div>
           <div className="hero-media" aria-hidden ref={heroMediaRef}>
             <div className="hero-card float">
-              <img src={'/images/products/60.jpg'} alt="featured" />
+              <img src={'/static/images/products/60.jpg'} alt="featured" />
             </div>
           </div>
         </div>

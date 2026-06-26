@@ -1,9 +1,9 @@
 // Prefer images from `public/images/products/` placed by the designer
-const img6 = '/images/products/6eggs.png'
-const img12 = '/images/products/12egg.png'
-const img18 = '/images/products/18eggs.png'
-const img30 = '/images/products/30eggs.png'
-const img60 = '/images/products/60eggs.png'
+const img6 = '/static/images/products/6eggs.png'
+const img12 = '/static/images/products/12egg.png'
+const img18 = '/static/images/products/18eggs.png'
+const img30 = '/static/images/products/30eggs.png'
+const img60 = '/static/images/products/60eggs.png'
 
 export type Product = {
   name: string

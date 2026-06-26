@@ -17,7 +17,7 @@ main{font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto
 .container{max-width:1280px;margin:0 auto;padding:0 20px}
 
 /* HERO - Image Background with Premium Glow */
-.hero{background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,250,236,0.65)), url('/images/6.png');background-size:cover;background-position:center;background-attachment:fixed;color:#111;display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;padding:70px 20px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,250,236,0.65)), url('/static/images/6.png');background-size:cover;background-position:center;background-attachment:fixed;color:#111;display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;padding:70px 20px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(212,175,55,0.18),transparent),radial-gradient(circle at 80% 80%,rgba(255,255,255,0.6),transparent);pointer-events:none}
 .hero h1{font-size:62px;line-height:1.12;margin:0 0 24px;font-weight:900;letter-spacing:-1px;color:#111;text-shadow:0 8px 30px rgba(212,175,55,0.15);position:relative;z-index:2}
 .hero p{font-size:19px;color:rgba(34,34,34,0.9);margin-bottom:32px;line-height:1.8;max-width:58ch;position:relative;z-index:2;font-weight:500;}
@@ -101,7 +101,7 @@ main{font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto
   .photo:hover{transform:translateY(-6px) scale(1.02)}
 
 /* Final CTA */
-.final-cta{background: linear-gradient(135deg, rgba(212,175,55,0.88), rgba(229,193,88,0.88)), url('/images/16.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-blend-mode: multiply; color: var(--black); padding: 120px 20px; text-align: center; border-radius: 0; position: relative; overflow: hidden}
+.final-cta{background: linear-gradient(135deg, rgba(212,175,55,0.88), rgba(229,193,88,0.88)), url('/static/images/16.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-blend-mode: multiply; color: var(--black); padding: 120px 20px; text-align: center; border-radius: 0; position: relative; overflow: hidden}
 .final-cta::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.2),transparent),radial-gradient(circle at 80% 80%,rgba(255,255,255,0.1),transparent);pointer-events:none}
 .final-cta h2{font-size:52px;margin:0 0 20px;font-weight:900;letter-spacing:-0.8px;color:var(--dark-text);position:relative;z-index:2}
 .final-cta p{font-size:20px;margin:0 0 40px;max-width:70ch;margin-left:auto;margin-right:auto;color:rgba(0,0,0,0.85);line-height:1.8;font-weight:500;position:relative;z-index:2}
@@ -274,7 +274,7 @@ export default function Home() {
         </div>
         <div data-reveal="right">
           <div ref={heroCardRef} style={{display:'inline-block',borderRadius:12,overflow:'hidden'}}>
-            <img ref={heroImgRef} className="hero-image parallax-element" src="/images/15.jpg" alt="Team and staff" />
+            <img ref={heroImgRef} className="hero-image parallax-element" src="/static/images/15.jpg" alt="Team and staff" />
           </div>
         </div>
       </section>
@@ -304,7 +304,7 @@ export default function Home() {
         <div ref={benefitsRef} className="container">
           <div className="about-grid">
             <div className="about-image">
-              <img src="/images/12.jpg" alt="Bakcon Poultry operation" />
+              <img src="/static/images/12.jpg" alt="Bakcon Poultry operation" />
             </div>
             <div className="about-content">
               <h2>About Bakcon Poultry</h2>
@@ -379,7 +379,7 @@ export default function Home() {
               </div>
             </div>
             <div className="distribution-image parallax-element" ref={distImgRef} data-reveal="right">
-              <img src="/images/4.jpg" alt="Distribution logistics" />
+              <img src="/static/images/4.jpg" alt="Distribution logistics" />
             </div>
           </div>
         </div>
@@ -426,18 +426,18 @@ export default function Home() {
           <p className="lead">A quick look at our facilities, team, and distribution fleet — real photos from our operation.</p>
 
           <div className="gallery-grid">
-            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/images/1.jpg" alt="Egg trays stacked" /></div>
-            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/images/15.jpg" alt="Team and staff" /></div>
-            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/images/3.jpg" alt="Facility exterior" /></div>
-            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/images/6.jpg" alt="Egg shop signage" /></div>
+            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/static/images/1.jpg" alt="Egg trays stacked" /></div>
+            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/static/images/15.jpg" alt="Team and staff" /></div>
+            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/static/images/3.jpg" alt="Facility exterior" /></div>
+            <div className="gallery-item" data-reveal="up"><img className="gallery-image" src="/static/images/6.jpg" alt="Egg shop signage" /></div>
           </div>
 
           <div className="photo-strip" aria-hidden>
-            <div className="photo"><img src="/images/2.jpg" alt="Delivery van" /></div>
-            <div className="photo"><img src="/images/7.jpg" alt="Fleet and tanks" /></div>
-            <div className="photo"><img src="/images/8.jpg" alt="Workers under tent" /></div>
-            <div className="photo"><img src="/images/9.jpg" alt="Interior rows" /></div>
-            <div className="photo"><img src="/images/11.jpg" alt="Welcome sign" /></div>
+            <div className="photo"><img src="/static/images/2.jpg" alt="Delivery van" /></div>
+            <div className="photo"><img src="/static/images/7.jpg" alt="Fleet and tanks" /></div>
+            <div className="photo"><img src="/static/images/8.jpg" alt="Workers under tent" /></div>
+            <div className="photo"><img src="/static/images/9.jpg" alt="Interior rows" /></div>
+            <div className="photo"><img src="/static/images/11.jpg" alt="Welcome sign" /></div>
           </div>
         </div>
       </section>

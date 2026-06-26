@@ -93,7 +93,7 @@ export default function About() {
             </div>
 
             <div className="about-hero-media">
-              <img src="/images/12.jpg" alt="Bakcon Poultry operation" />
+              <img src="/static/images/12.jpg" alt="Bakcon Poultry operation" />
             </div>
           </div>
         </div>
@@ -105,9 +105,9 @@ export default function About() {
           <p className="lead">Our local team keeps operations running smoothly — from farm management to delivery and customer support.</p>
 
           <div className="team-grid">
-            <div className="team-member" data-reveal="up"><img src="/images/13.jpg" alt="Team member" /><div className="meta"><strong>John Doe</strong><div style={{fontSize:13,color:'var(--muted)'}}>Operations Manager</div></div></div>
-            <div className="team-member" data-reveal="up"><img src="/images/14.jpg" alt="Team member" /><div className="meta"><strong>Jane Smith</strong><div style={{fontSize:13,color:'var(--muted)'}}>Logistics</div></div></div>
-            <div className="team-member" data-reveal="up"><img src="/images/15.jpg" alt="Team member" /><div className="meta"><strong>Pamela</strong><div style={{fontSize:13,color:'var(--muted)'}}>Quality Control</div></div></div>
+            <div className="team-member" data-reveal="up"><img src="/static/images/13.jpg" alt="Team member" /><div className="meta"><strong>John Doe</strong><div style={{fontSize:13,color:'var(--muted)'}}>Operations Manager</div></div></div>
+            <div className="team-member" data-reveal="up"><img src="/static/images/14.jpg" alt="Team member" /><div className="meta"><strong>Jane Smith</strong><div style={{fontSize:13,color:'var(--muted)'}}>Logistics</div></div></div>
+            <div className="team-member" data-reveal="up"><img src="/static/images/15.jpg" alt="Team member" /><div className="meta"><strong>Pamela</strong><div style={{fontSize:13,color:'var(--muted)'}}>Quality Control</div></div></div>
           </div>
         </div>
       </section>
