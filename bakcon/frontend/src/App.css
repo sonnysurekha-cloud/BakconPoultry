@@ -246,33 +246,98 @@
   border-radius: 999px;
   box-shadow: 0 8px 20px rgba(2,6,23,0.12);
 }
-@media (max-width: 760px) {
-  .container {
-    padding-left: 14px;
-    padding-right: 14px;
+@media (max-width: 900px) {
+  .site-header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .header-actions,
+  .hero-buttons,
+  .hero-cta,
+  .showcase-cta,
+  .price-row,
+  .card-actions,
+  .products-header,
+  .filters,
+  .qty-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero,
+  .hero-inner,
+  .about-hero-inner,
+  .showcase-inner,
+  .distribution-grid,
+  .process-grid,
+  .stats-strip,
+  .serve-grid,
+  .benefits-grid,
+  .testimonial-grid,
+  .gallery-grid,
+  .customer-grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
   .hero,
   .products-hero,
   .showcase-hero,
-  .page-intro,
-  .panel,
-  .map-card,
-  .checkout-panel,
-  .quick-panel,
-  .product-card,
-  .cart-item,
+  .about-premium,
+  .coverage-section,
+  .stats-section,
+  .testimonials,
+  .faq-section,
+  .premium-cta,
+  .section {
+    padding: 40px 18px;
+  }
+  .hero,
+  .hero-image,
+  .hero-media,
   .hero-card,
-  .info-card,
+  .about-image img,
+  .distribution-image img,
+  .product-image img,
+  .gallery-item img,
   .footer-inner,
-  .footer-bottom {
+  .quick-media,
+  .hero-copy,
+  .hero-content {
     width: 100%;
+    max-width: 100%;
+  }
+  .hero-image img,
+  .about-image img,
+  .distribution-image img,
+  .product-image img,
+  .gallery-item img,
+  .quick-media img,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    background-attachment: scroll !important;
   }
   .hero h1,
-  .about-hero-content h1,
   .section h2,
   .page-intro h1,
-  .product-hero h1 {
-    font-size: clamp(28px, 6vw, 36px);
+  .product-hero h1,
+  h1,
+  h2 {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+  .hero p,
+  .section .lead,
+  .muted,
+  .product-desc,
+  .footer-brand p,
+  p {
+    font-size: 15px;
+    line-height: 1.75;
   }
   .btn,
   .btn.primary,
@@ -282,6 +347,7 @@
   .newsletter input,
   .newsletter button {
     width: 100%;
+    max-width: 100%;
   }
   .cart-image {
     width: 100%;
@@ -291,13 +357,99 @@
     flex-direction: column;
     align-items: stretch;
   }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero-buttons,
+  .hero-cta,
+  .showcase-cta,
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
-@media (max-width: 760px) {
-  .container { padding: 0 14px; }
-  h1 { font-size: 36px; }
-  h2 { font-size: 28px; }
-  p { font-size: 15px; }
-  .hero { padding: 32px 16px; }
+@media (max-width: 640px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .site-header .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+  h1 {
+    font-size: clamp(28px, 8vw, 34px);
+  }
+  h2 {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+  p {
+    font-size: 15px;
+  }
+  .hero {
+    padding: 28px 16px;
+  }
+  .hero h1,
+  .section h2 {
+    line-height: 1.15;
+  }
+  .hero-image,
+  .hero-card,
+  .hero-media,
+  .about-image img,
+  .distribution-image img,
+  .product-image img,
+  .gallery-item img,
+  .quick-panel,
+  .footer-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-buttons,
+  .hero-cta,
+  .showcase-cta,
+  .card-actions,
+  .products-header,
+  .filters,
+  .qty-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .products-grid,
+  .gallery-grid,
+  .testimonial-grid,
+  .customer-grid,
+  .stats-strip,
+  .serve-grid,
+  .distribution-grid,
+  .about-grid,
+  .benefits-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-image img {
+    object-fit: cover;
+  }
+  .product-media {
+    height: auto;
+    min-height: 180px;
+  }
+  .quick-panel {
+    padding: 18px;
+  }
+  .product-card {
+    padding: 16px;
+  }
+  .footer-bottom {
+    width: 100%;
+  }
 }
 
 
