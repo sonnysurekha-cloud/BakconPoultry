@@ -46,10 +46,6 @@ export default function LoadingProvider({ children }: LoadingProviderProps) {
         <div className="loading-provider-overlay" role="status" aria-label="Loading Bakcon Eggs">
           <div className="loading-provider-card">
             <div className="loading-provider-brand">Bakcon Eggs</div>
-            <div className="loading-provider-spinner" aria-hidden="true">
-              <div className="spinner-ring" />
-              <div className="spinner-dot" />
-            </div>
             <div className="loading-provider-dots">
               <span style={{ animationDelay: '0s' }} />
               <span style={{ animationDelay: '0.15s' }} />
