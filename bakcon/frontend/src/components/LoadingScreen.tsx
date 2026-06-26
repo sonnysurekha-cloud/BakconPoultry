@@ -3,24 +3,19 @@ import './LoadingScreen.css'
 export default function LoadingScreen() {
   return (
     <div className="loading-screen" role="status" aria-label="Loading Bakcon Eggs">
-      <div className="loading-screen__canvas" aria-hidden="true">
-        <div className="loading-screen__halo" />
-        <div className="loading-screen__rings">
-          <span className="ring ring--one" />
-          <span className="ring ring--two" />
-          <span className="ring ring--three" />
-          <span className="core" />
+      <div className="loading-screen__panel">
+        <div className="loading-screen__header">
+          <p className="loading-screen__eyebrow">Bakcon Eggs</p>
+          <h1>Loading</h1>
+          <p className="loading-screen__caption">Please wait while we prepare the platform.</p>
         </div>
-        <div className="loading-screen__spark loading-screen__spark--one" />
-        <div className="loading-screen__spark loading-screen__spark--two" />
-        <div className="loading-screen__spark loading-screen__spark--three" />
-        <div className="loading-screen__spark loading-screen__spark--four" />
-      </div>
 
-      <div className="loading-screen__text">
-        <p className="loading-screen__eyebrow">Bakcon Eggs</p>
-        <h1>Preparing your experience</h1>
-        <p className="loading-screen__caption">Please wait while we prepare the premium Bakcon Eggs platform for you.</p>
+        <div className="loading-screen__spinner" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
     </div>
   )
