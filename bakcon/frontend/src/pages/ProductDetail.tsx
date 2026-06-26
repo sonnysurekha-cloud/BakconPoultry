@@ -40,13 +40,13 @@ export default function ProductDetail() {
         .product-hero{display:flex;flex-direction:column;gap:12px}
         .product-hero h1{margin:0;font-size:32px}
         .price{font-size:28px;font-weight:900;color:var(--gold, #D4AF37)}
-        .product-image{background:linear-gradient(180deg, #fff, #fbfbf9);padding:18px;border-radius:12px;display:flex;align-items:center;justify-content:center}
-        .product-image img{max-width:320px;max-height:300px}
+        .product-image{background:linear-gradient(180deg, #fff, #fbfbf9);padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;max-width:220px;margin:0 auto}
+        .product-image img{width:300px;height:400px;object-fit:fill;border-radius:10px}
         .features{margin-top:12px;display:flex;flex-direction:column;gap:8px}
         .feature{background:var(--light-gray);padding:10px;border-radius:8px}
         .actions{display:flex;gap:12px;margin-top:18px}
         @media (max-width:900px){.detail-grid{grid-template-columns:1fr;gap:20px}}
-        @media (max-width:760px){.product-detail{padding:18px 14px}.actions{flex-direction:column}.actions .btn{width:100%}.product-image img{max-width:100%;height:auto}}
+        @media (max-width:760px){.product-detail{padding:18px 14px}.product-hero h1{font-size:28px}.product-image{padding:16px;max-width:320px}.detail-grid{gap:18px}.actions{flex-direction:column;gap:12px}.actions .btn{width:100%}.product-image img{width:300px;height:400px}.feature{font-size:15px}.price{font-size:24px}}
       `}</style>
 
       <div className="detail-grid">
