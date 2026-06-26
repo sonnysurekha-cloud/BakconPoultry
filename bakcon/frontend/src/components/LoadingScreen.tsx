@@ -19,8 +19,8 @@ export default function LoadingScreen() {
 
       <div className="loading-screen__text">
         <p className="loading-screen__eyebrow">Bakcon Eggs</p>
-        <h1>Loading your farm fresh experience</h1>
-        <p className="loading-screen__caption">A premium spin of color, glow, and motion. Please wait.</p>
+        <h1>Preparing your experience</h1>
+        <p className="loading-screen__caption">Please wait while we prepare the premium Bakcon Eggs platform for you.</p>
       </div>
     </div>
   )
