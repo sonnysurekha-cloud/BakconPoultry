@@ -46,7 +46,7 @@ export default function ProductDetail() {
         .feature{background:var(--light-gray);padding:10px;border-radius:8px}
         .actions{display:flex;gap:12px;margin-top:18px}
         @media (max-width:900px){.detail-grid{grid-template-columns:1fr;gap:20px}}
-        @media (max-width:760px){.product-detail{padding:18px 14px}.product-hero h1{font-size:28px}.product-image{padding:16px;max-width:320px}.detail-grid{gap:18px}.actions{flex-direction:column;gap:12px}.actions .btn{width:100%}.product-image img{width:300px;height:400px}.feature{font-size:15px}.price{font-size:24px}}
+        @media (max-width:760px){.product-detail{padding:18px 14px}.product-hero h1{font-size:28px}.product-image{padding:16px;max-width:320px}.detail-grid{gap:18px}.actions{flex-direction:column;gap:12px}.actions .btn{width:100%}.product-image img{width:400px;height:500px}.feature{font-size:15px}.price{font-size:24px}}
       `}</style>
 
       <div className="detail-grid">
