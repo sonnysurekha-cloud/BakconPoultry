@@ -7,37 +7,51 @@ type LoadingProviderProps = {
 }
 
 export default function LoadingProvider({ children }: LoadingProviderProps) {
-  const location = useLocation()
   const [isLoading, setIsLoading] = useState(true)
+  const location = useLocation()
 
   useEffect(() => {
     const hideLoader = () => setIsLoading(false)
 
-    if (document.readyState === 'complete') {
-      const initTimer = window.setTimeout(hideLoader, 1200)
-      return () => window.clearTimeout(initTimer)
+    const checkPageReady = () => {
+      if (document.readyState === 'complete') {
+        setTimeout(hideLoader, 600)
+        return true
+      }
+      return false
+    }
+
+    if (checkPageReady()) {
+      return
+    }
+
+    const handleReadyStateChange = () => {
+      if (document.readyState === 'complete') {
+        setTimeout(hideLoader, 600)
+      }
     }
 
     const handleLoad = () => {
-      window.setTimeout(hideLoader, 1200)
+      setTimeout(hideLoader, 600)
     }
 
+    document.addEventListener('readystatechange', handleReadyStateChange)
     window.addEventListener('load', handleLoad)
+
     const maxTimeout = window.setTimeout(hideLoader, 10000)
 
     return () => {
+      document.removeEventListener('readystatechange', handleReadyStateChange)
       window.removeEventListener('load', handleLoad)
       window.clearTimeout(maxTimeout)
     }
   }, [])
 
   useEffect(() => {
-    if (location.pathname) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-      setIsLoading(true)
-      const routeTimer = window.setTimeout(() => setIsLoading(false), 700)
-      return () => window.clearTimeout(routeTimer)
-    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    setIsLoading(true)
+    const routeTimer = window.setTimeout(() => setIsLoading(false), 650)
+    return () => window.clearTimeout(routeTimer)
   }, [location.pathname])
 
   return (

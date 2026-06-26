@@ -49,7 +49,7 @@ export const products: Product[] = [
     name: '30 Eggs',
     slug: '30-eggs',
     img: img30,
-    price: 70,
+    price: 65,
     unit: 'per pack',
     desc: 'Wholesale tray (30 eggs) for hospitality and retail restocking.',
     features: ['Bulk-ready', 'Stackable trays', 'Optimized for distribution']
@@ -58,7 +58,7 @@ export const products: Product[] = [
     name: '60 Eggs',
     slug: '60-eggs',
     img: img60,
-    price: 140,
+    price: 130,
     unit: 'per tray',
     desc: 'Large wholesale pack (60 eggs) for extensive catering and retail needs.',
     features: ['Economical', 'Secure packaging', 'Longer shelf rotation']
