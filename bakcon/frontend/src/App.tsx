@@ -1,9 +1,8 @@
 import './App.css'
-import { useEffect, useState } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import LoadingScreen from './components/LoadingScreen'
+import LoadingProvider from './components/LoadingProvider'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
@@ -18,41 +17,32 @@ import useScrollProgress from './hooks/useScrollProgress'
 import FloatingCart from './components/FloatingCart'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  const location = useLocation()
   useScrollProgress()
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-    setLoading(true)
-
-    const timer = window.setTimeout(() => setLoading(false), 700)
-    return () => window.clearTimeout(timer)
-  }, [location.pathname])
-
   return (
-    <div className="app-root">
-      {loading && <LoadingScreen />}
-      <Header />
-      {/* scroll progress bar */}
-      <div id="scroll-progress" aria-hidden style={{ position: 'fixed', left: 0, top: 0, height: 3, background: 'var(--egg)', width: 0, zIndex: 9999 }} />
-      {/* Sticky CTA removed per request */}
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:slug" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/payments/return" element={<PaymentReturn />} />
-          <Route path="/showcase" element={<Showcase />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/stores" element={<StoreLocator />} />
-        </Routes>
-      </main>
-      <FloatingCart />
-      <Footer />
-    </div>
+    <LoadingProvider>
+      <div className="app-root">
+        <Header />
+        {/* scroll progress bar */}
+        <div id="scroll-progress" aria-hidden style={{ position: 'fixed', left: 0, top: 0, height: 3, background: 'var(--egg)', width: 0, zIndex: 9999 }} />
+        {/* Sticky CTA removed per request */}
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:slug" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/payments/return" element={<PaymentReturn />} />
+            <Route path="/showcase" element={<Showcase />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/stores" element={<StoreLocator />} />
+          </Routes>
+        </main>
+        <FloatingCart />
+        <Footer />
+      </div>
+    </LoadingProvider>
   )
 }
 
