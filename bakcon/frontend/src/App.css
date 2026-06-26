@@ -217,8 +217,8 @@
 /* Floating cart button (bottom-right) */
 .floating-cart {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
   width: 56px;
   height: 56px;
   border-radius: 999px;
@@ -245,6 +245,13 @@
   padding: 4px 7px;
   border-radius: 999px;
   box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+}
+
+@media (max-width: 760px) {
+  .floating-cart {
+    right: 16px;
+    bottom: 90px;
+  }
 }
 @media (max-width: 900px) {
   .site-header .container {
