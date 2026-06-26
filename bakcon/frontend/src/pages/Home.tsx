@@ -129,7 +129,8 @@ main{font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto
   .section h2{font-size:36px}
   .stats-strip{grid-template-columns:1fr}
   .serve-grid{grid-template-columns:1fr}
-  .distribution-grid{grid-template-columns:1fr}
+  .distribution-grid{grid-template-columns:1fr 1fr; gap:20px}
+  .distribution-locations, .distribution-image { width:100%; }
   .gallery-grid{grid-template-columns:1fr}
   .photo-strip{padding:12px 0}
   .photo{min-width:100%;}
