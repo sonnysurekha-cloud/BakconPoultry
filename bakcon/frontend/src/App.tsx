@@ -1,7 +1,9 @@
 import './App.css'
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import LoadingScreen from './components/LoadingScreen'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
@@ -16,10 +18,17 @@ import useScrollProgress from './hooks/useScrollProgress'
 import FloatingCart from './components/FloatingCart'
 
 function App() {
+  const [loading, setLoading] = useState(true)
   useScrollProgress()
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLoading(false), 1700)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   return (
     <div className="app-root">
+      {loading && <LoadingScreen />}
       <Header />
       {/* scroll progress bar */}
       <div id="scroll-progress" aria-hidden style={{ position: 'fixed', left: 0, top: 0, height: 3, background: 'var(--egg)', width: 0, zIndex: 9999 }} />

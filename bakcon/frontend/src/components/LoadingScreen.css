@@ -1,0 +1,129 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, rgba(255, 245, 210, 0.18), rgba(255, 255, 255, 0.95) 35%, rgba(32, 17, 8, 0.08));
+  z-index: 99999;
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.loading-screen__canvas {
+  position: relative;
+  width: min(360px, 80vw);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.55), rgba(255, 248, 230, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.14);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loading-screen__halo {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(233, 168, 37, 0.22), transparent 48%);
+  filter: blur(32px);
+  opacity: 0.8;
+}
+
+.loading-screen__rings {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  display: grid;
+  place-items: center;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(233, 168, 37, 0.35);
+  box-shadow: 0 0 40px rgba(233, 168, 37, 0.25);
+  animation: spin 4s linear infinite;
+}
+
+.ring--one { width: 240px; height: 240px; border-color: rgba(233, 168, 37, 0.22); animation-duration: 6s; }
+.ring--two { width: 180px; height: 180px; border-color: rgba(255, 205, 68, 0.32); animation-duration: 4.5s; }
+.ring--three { width: 120px; height: 120px; border-color: rgba(255, 255, 255, 0.9); animation-duration: 3.4s; }
+
+.core {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, rgba(255, 232, 143, 0.95));
+  box-shadow: 0 0 40px rgba(255, 230, 145, 0.9);
+}
+
+.loading-screen__spark {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.9);
+  filter: blur(0.5px);
+  animation: shimmer 2.8s ease-in-out infinite;
+}
+
+.loading-screen__spark--one { top: 16%; left: 20%; animation-delay: 0s; }
+.loading-screen__spark--two { top: 12%; right: 18%; animation-delay: 0.4s; }
+.loading-screen__spark--three { bottom: 14%; left: 16%; animation-delay: 0.8s; }
+.loading-screen__spark--four { bottom: 18%; right: 20%; animation-delay: 1.2s; }
+
+.loading-screen__text {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.loading-screen__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.78rem;
+  color: #7d5b14;
+  margin-bottom: 14px;
+}
+
+.loading-screen h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #2b1605;
+}
+
+.loading-screen__caption {
+  margin: 14px auto 0;
+  max-width: 310px;
+  color: #51370a;
+  font-size: 0.96rem;
+  opacity: 0.9;
+  line-height: 1.55;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.94); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-12px) scale(1.25); opacity: 1; }
+}
+
+@media (max-width: 520px) {
+  .loading-screen__canvas { width: min(280px, 80vw); }
+  .ring--one { width: 210px; height: 210px; }
+  .ring--two { width: 160px; height: 160px; }
+  .ring--three { width: 100px; height: 100px; }
+  .loading-screen__text { bottom: 22px; }
+}
